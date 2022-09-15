@@ -10,13 +10,13 @@ It means that each `Policy` has at least one quote. End-user expect report where
 * Candidate need to write logic in `@Service` and `@Controller` classes.
 
 ### * Service part
-You need to implement `loadReport` method. This method should use Map structure. The only method what you can use from `PolicyRepository` is `Stram<Policy> loadAllPolicyRecords()`. This method will return Stream with all policy records from DB.
+You need to implement `loadReport` method. This method should use Map structure. The only method what you can use from `PolicyRepository` is `Stream<Policy> loadAllPolicyRecords()`. This method will return Stream with all policy records from DB.
 
 ### * Controller part
 You need to fix `getReport()` method.
 
 ### * Testing
-You have to implement test which will test `/report` end-point (end-point exist, receive expected media-type, response caan be mapped to `ReportDTO` class)
+You have to implement test which will test `/report` end-point (end-point exist, receive expected media-type, response can be mapped to `ReportDTO` class)
 
 ### Tech spec.
 - H2 DB console: http://localhost:8080/h2-console
