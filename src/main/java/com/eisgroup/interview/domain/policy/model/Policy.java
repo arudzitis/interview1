@@ -3,10 +3,12 @@ package com.eisgroup.interview.domain.policy.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Type;
+import org.hibernate.id.UUIDGenerator;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -16,7 +18,8 @@ import java.util.UUID;
 @Entity
 public class Policy {
     @Id
-    @Column(columnDefinition = "CHARACTER VARYING(40)")
+    @Type(type="uuid-char")
+    @SequenceGenerator(name = UUIDGenerator.GENERATOR_NAME)
     private UUID id;
     private String type;
     private LocalDate issued;
