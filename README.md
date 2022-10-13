@@ -5,12 +5,13 @@
 `Policy` model can have two types of records: 1 - `policy`, 2 - `quote`. We can have quotes without policy but we can not have policies without quotes.
 It means that each `Policy` has at least one quote. End-user expect report where they will be able to see: how many quotes we have for each policy.
 
-* Candidate will be able to return list of `ReportDTO` records on REST facade `/report` using specific Java structures.
+* Candidate have to return list of `ReportDTO` records on REST facade `/report` using any Java structure or his own.
 * Candidate can't touch Repository interfaces.
 * Candidate need to write logic in `@Service` and `@Controller` classes.
 
+
 ### * Service part
-You need to implement `loadReport` method. This method should use Map structure. The only method what you can use from `PolicyRepository` is `Stream<Policy> loadAllPolicyRecords()`. This method will return Stream with all policy records from DB.
+You need to implement `loadReport` method. This method can use any Java or own structure. The only method what you can use from `PolicyRepository` is `Stream<Policy> loadAllPolicyRecords()`. This method will return Stream with all policy records from DB.
 
 ### * Controller part
 You need to fix `getReport()` method.
