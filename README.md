@@ -11,7 +11,7 @@ It means that each `Policy` has at least one quote. End-user expect report where
 
 
 ### * Service part
-You need to implement `loadReport` method. This method can use any Java or нщгк own structure. The only method what you can use from `PolicyRepository` is `Stream<Policy> loadAllPolicyRecords()`. This method will return Stream with all policy records from DB.
+You need to implement `loadReport` method. This method can use any Java or your own structure. The only method what you can use from `PolicyRepository` is `Stream<Policy> loadAllPolicyRecords()`. This method will return Stream with all policy records from DB.
 
 ### * Controller part
 You need to fix `getReport()` method.
